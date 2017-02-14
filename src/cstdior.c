@@ -33,11 +33,16 @@
 
 #include  "../../dbgr/inc/dbgr.h"
 #include  "../../osnfo/inc/osnfo.h"
-#include "../inc/cstdior.h"
+#include  "../inc/cstdior.h"
+#include  "../../stringx/inc/stringx.h"
 
 int
 main(void)
 {
+    if (!strcmpigor(getosname(), "LINUX"))
+    {
+        printf("LINUX\n");
+    }
     return 0;
 }
 
@@ -48,7 +53,7 @@ fexists(char *fname)
     if (fp)
     {
         DEBUG_OUTF(DBGF_FE, fname);
-        fclose(file);
+        fclose(fp);
         return 1;
     }
 

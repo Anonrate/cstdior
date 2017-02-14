@@ -30,6 +30,16 @@
 
 #include  "dbgcstdior.h"
 
+/**
+ * @brief   file exists
+ * @details Checks if the file specified to by \p fname exists.
+ * @param[in] fname The file name to check if exists or not.
+ * @returns 
+ *  @return If the file specified to by \p fname exists, the return value is
+ *            \c nonzero
+ *  @return If the file specified to by \p fname does not exists, the return
+ *            value is \c 0.
+ */
 int
 fexists(char *fname);
 #endif  /* CSTDIOR_H */
